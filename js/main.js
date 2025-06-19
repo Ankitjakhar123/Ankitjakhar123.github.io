@@ -115,20 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
 
     // Initialize particles
-    if (typeof particlesJS !== 'undefined') {
+    if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
         particlesJS('particles-js', {
             particles: {
                 number: { value: 80 },
                 color: { value: '#00BFFF' },
                 shape: { type: 'circle' },
-                opacity: {
-                    value: 0.5,
-                    random: true
-                },
-                size: {
-                    value: 3,
-                    random: true
-                },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
                 move: {
                     enable: true,
                     speed: 2,
@@ -140,14 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
             interactivity: {
                 detect_on: 'canvas',
                 events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'repulse'
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    }
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' }
                 }
             }
         });

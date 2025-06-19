@@ -262,7 +262,6 @@ section {
 /* Hero Section */
 .hero {
     position: relative;
-    background: transparent !important;
     overflow: hidden;
     z-index: 1;
     min-height: 100vh;
@@ -425,19 +424,47 @@ section {
     
     .hero-content {
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         gap: 2rem;
         padding: 0 1rem;
     }
-    
     .profile-wrapper {
-        width: 200px;
-        height: 200px;
+        width: 140px;
+        height: 140px;
+        aspect-ratio: 1/1;
+        margin: 0 auto 1.2rem auto;
+    }
+    .profile-image {
+        width: 100%;
+        height: 100%;
         aspect-ratio: 1/1;
     }
-    
+    .hero-text {
+        max-width: 100%;
+        padding: 0;
+    }
     .hero-text h1 {
-        font-size: 3rem;
+        font-size: 2.1rem;
+        margin-bottom: 0.7rem;
+    }
+    .typing-text {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    .cta-buttons {
+        flex-direction: column;
+        gap: 0.7rem;
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -445,22 +472,17 @@ section {
     html { font-size: 13px; }
     .container { width: var(--container-width-sm); }
     
-    .hero-text h1 { font-size: 2.5rem; }
-    .typing-text { font-size: 1.2rem; }
     .profile-wrapper {
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
         aspect-ratio: 1/1;
     }
     
-    .cta-buttons {
-        flex-direction: column;
-        width: 100%;
+    .hero-text h1 {
+        font-size: 1.4rem;
     }
-    
-    .btn {
-        width: 100%;
-        justify-content: center;
+    .typing-text {
+        font-size: 0.95rem;
     }
 }
 
@@ -1454,4 +1476,22 @@ body.dark-mode .footer, [data-theme="dark"] .footer {
         width: 100%;
         justify-content: center;
     }
+}
+
+.skills, .projects, .contact {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    z-index: auto !important;
+    background: transparent !important;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
 }
