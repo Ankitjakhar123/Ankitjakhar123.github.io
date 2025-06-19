@@ -1250,6 +1250,10 @@ section {
     padding: 1.2rem 0 1.2rem 0;
     margin: 0;
     width: 100%;
+    position: static !important;
+    left: unset !important;
+    bottom: unset !important;
+    z-index: unset !important;
 }
 
 body.dark-mode .footer, [data-theme="dark"] .footer {
