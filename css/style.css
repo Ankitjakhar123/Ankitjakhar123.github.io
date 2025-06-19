@@ -1445,3 +1445,51 @@ section {
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
 }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0, 191, 255, 0.15);
+}
+
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.project-card p {
+    color: var(--muted-text);
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.project-card .btn {
+    margin-top: 1rem;
+}
