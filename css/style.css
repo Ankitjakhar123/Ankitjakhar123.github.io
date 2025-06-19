@@ -260,7 +260,7 @@ section {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(120deg, rgba(0,191,255,0.08) 0%, rgba(30,144,255,0.04) 100%);
+    background: transparent !important;
     overflow: hidden;
     z-index: 1;
     min-height: 100vh;
@@ -622,7 +622,7 @@ section {
 /* About Section */
 .about {
     position: relative;
-    background: linear-gradient(120deg, rgba(0,191,255,0.08) 0%, rgba(30,144,255,0.04) 100%);
+    background: transparent !important;
     overflow: hidden;
     z-index: 1;
 }
@@ -742,7 +742,7 @@ section {
     display: inline-block;
     padding: 0.45rem 1.1rem;
     border-radius: 30px;
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.13), rgba(30, 144, 255, 0.13));
+    background: linear-gradient(120deg, rgba(0, 191, 255, 0.13), rgba(30, 144, 255, 0.13));
     border: 1px solid rgba(0,191,255,0.13);
     color: var(--primary-color);
     font-size: 0.95rem;
@@ -902,7 +902,7 @@ section {
 /* Contact Section */
 .contact {
     position: relative;
-    background: linear-gradient(135deg, rgba(0,191,255,0.03) 0%, rgba(30,144,255,0.03) 100%);
+    background: transparent !important;
     overflow: hidden;
 }
 
@@ -958,7 +958,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.05) 0%, rgba(30, 144, 255, 0.05) 100%);
+    background: linear-gradient(120deg, rgba(0, 191, 255, 0.05) 0%, rgba(30, 144, 255, 0.05) 100%);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -978,7 +978,7 @@ section {
     width: 80px;
     height: 80px;
     margin: 0 auto 1.5rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1052,7 +1052,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.03) 0%, rgba(30, 144, 255, 0.03) 100%);
+    background: linear-gradient(120deg, rgba(0, 191, 255, 0.03) 0%, rgba(30, 144, 255, 0.03) 100%);
     pointer-events: none;
 }
 
@@ -1139,7 +1139,7 @@ section {
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 15px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
     border: none;
     color: white;
     box-shadow: 0 8px 25px rgba(0, 191, 255, 0.3);
@@ -1215,7 +1215,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -1441,4 +1441,12 @@ section {
         width: 100%;
         justify-content: center;
     }
+}
+
+body.dark-mode .footer {
+    background: rgba(20,24,32,0.92);
+    border-top: 1px solid rgba(0,191,255,0.10);
+}
+body.dark-mode .footer p {
+    color: #f1f1f1;
 }
