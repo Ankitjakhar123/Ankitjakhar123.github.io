@@ -1,3 +1,13 @@
+/* Particles.js Background */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind all content */
+}
+
 /* Base Styles */
 :root {
     --primary-color: #00BFFF;
@@ -246,7 +256,7 @@ section {
     }
 }
 
-/* Fix for landscape mode */
+/* Enhanced Landscape Mode */
 @media (max-height: 500px) and (orientation: landscape) {
     .nav-links {
         padding: 2rem 0;
@@ -257,12 +267,78 @@ section {
         font-size: 1rem;
         margin: 0.5rem 0;
     }
+    
+    .hero {
+        min-height: 120vh; /* Ensures content is fully visible when scrolling */
+    }
+    
+    .hero-content {
+        padding: 8rem 0 4rem;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    .profile-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .hero-text {
+        padding-bottom: 2rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .typing-text {
+        font-size: 1.2rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        padding: 6rem 0 2rem;
+    }
+    
+    .about-profile .profile-wrapper {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 1rem;
+    }
+    
+    .about-description {
+        margin-bottom: 0.5rem;
+    }
+    
+    .info-cards {
+        grid-template-columns: repeat(3, 1fr);
+        margin: 1rem 0;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+    
+    .contact-cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .contact-form-container {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .social-link {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    overflow: hidden;
     z-index: 1;
     min-height: 100vh;
     display: flex;
@@ -528,77 +604,6 @@ section {
     }
 }
 
-/* Enhanced Landscape Mode */
-@media (max-height: 500px) and (orientation: landscape) {
-    .hero {
-        min-height: 120vh; /* Ensures content is fully visible when scrolling */
-    }
-    
-    .hero-content {
-        padding: 8rem 0 4rem;
-        flex-direction: row;
-        gap: 2rem;
-    }
-    
-    .profile-wrapper {
-        width: 160px;
-        height: 160px;
-    }
-    
-    .hero-text {
-        padding-bottom: 2rem;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    
-    .typing-text {
-        font-size: 1.2rem;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
-        padding: 6rem 0 2rem;
-    }
-    
-    .about-profile .profile-wrapper {
-        width: 160px;
-        height: 160px;
-        margin-bottom: 1rem;
-    }
-    
-    .about-description {
-        margin-bottom: 0.5rem;
-    }
-    
-    .info-cards {
-        grid-template-columns: repeat(3, 1fr);
-        margin: 1rem 0;
-    }
-    
-    .section {
-        padding: 3rem 0;
-    }
-    
-    .contact-cards-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .contact-form-container {
-        padding: 1.5rem;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .social-link {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-}
-
 /* Fix for iOS Safari 100vh issue */
 @supports (-webkit-touch-callout: none) {
     .hero, .contact, .about, .skills, .projects {
@@ -607,45 +612,8 @@ section {
     }
 }
 
-/* Print mode refinements */
-@media print {
-    /* Remove unnecessary elements for print */
-    #particles-js,
-    #about-particles,
-    .scroll-progress,
-    .dark-mode-toggle,
-    .hamburger {
-        display: none !important;
-    }
-    
-    /* Adjust spacing for print */
-    section {
-        padding: 1rem 0;
-        page-break-inside: avoid;
-    }
-    
-    /* Ensure text is readable */
-    .hero-text h1,
-    .about-heading {
-        -webkit-text-fill-color: black;
-        color: black !important;
-    }
-    
-    /* Force background colors for print */
-    .contact-card,
-    .social-stat-card,
-    .skill-card,
-    .project-card,
-    .info-card {
-        background: #fff !important;
-        border: 1px solid #ddd !important;
-        break-inside: avoid;
-    }
-}
-
 /* About Section */
 .about {
-    position: relative;
     min-height: 100vh;
 }
 
@@ -824,14 +792,6 @@ section {
     color: var(--primary-color);
 }
 
-.percentage {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
 .progress-bar {
     position: relative;
     width: 100%;
@@ -923,9 +883,7 @@ section {
 
 /* Contact Section */
 .contact {
-    position: relative;
     background: transparent !important;
-    overflow: hidden;
 }
 
 .contact::before {
@@ -1139,7 +1097,9 @@ section {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 4px rgba(0, 191, 255, 0.1);
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 50%, rgba(255, 255, 255, 0.95) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
 }
 
 .form-group input::placeholder,
@@ -1400,13 +1360,6 @@ body.dark-mode .footer, [data-theme="dark"] .footer {
     100% {
         background-position: 200% 0;
     }
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 50%, rgba(255, 255, 255, 0.95) 100%);
-    background-size: 200% 100%;
-    animation: shimmer 2s infinite;
 }
 
 .projects-grid {
